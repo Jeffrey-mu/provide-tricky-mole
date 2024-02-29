@@ -1,5 +1,6 @@
-import { useEffect } from "react"
 import "~/lib/style.css"
+
+import { useEffect } from "react"
 function IndexPopup() {
   useEffect(() => {
 
@@ -13,8 +14,7 @@ function IndexPopup() {
     )
   }, [])
   return (
-    <div
-      className="w-20 h-20 bg-red-200">
+    <div className="min-w-[350px] p-3">
       <a href="/options.html" target="_blank">go options.html</a>
     </div>
   )
