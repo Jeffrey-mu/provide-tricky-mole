@@ -1,23 +1,23 @@
-import { useEffect } from "react"
-import "~/lib/style.css"
-function IndexPopup() {
-  useEffect(() => {
+import { Link, MemoryRouter } from "react-router-dom"
+import { Routing } from "~/options/routes"
+function Options() {
 
-    chrome.tabs.query(
-      {
-        active: true,
-      },
-      ([tab]) => {
-        console.log('popupReady')
-      },
-    )
-  }, [])
   return (
     <div
       className="w-20 h-20 bg-red-200">
-      <a href="/options.html" target="_blank">go options.html</a>
+
+      <MemoryRouter>
+        <Link to="/about">
+          <span>About</span>
+        </Link>
+        <div className="flex sm:gap-20 h-full sm:flex-row flex-col">
+          <div className="flex-1">
+            <Routing />
+          </div>
+        </div>
+      </MemoryRouter>
     </div>
   )
 }
 
-export default IndexPopup
+export default Options
