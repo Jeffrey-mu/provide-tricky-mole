@@ -7,5 +7,6 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     return true
   }
 })
-
+// 测试
+console.log('log')
 export {}
